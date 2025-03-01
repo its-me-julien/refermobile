@@ -1,24 +1,80 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/aspect-ratio';
 
 @theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-coinbase: CoinbaseText, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-white: var(--white);
+  --color-black: var(--black);
+  --color-dark-grey: var(--dark-grey);
+  --color-grey: var(--grey);
+  --color-lightest-grey: var(--lightest-grey);
+  --color-primary: var(--primary);
+  --color-mid-grey: var(--mid-grey);
+  --color-light-grey: var(--light-grey);
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
   }
 }
 
+@font-face {
+  font-family: 'CoinbaseText';
+  src: url('/fonts/Coinbase_Text-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CoinbaseText';
+  src: url('/fonts/Coinbase_Text-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CoinbaseText';
+  src: url('/fonts/Coinbase_Text-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Define light mode colors */
+:root {
+  --background: #F5E6C8;
+  --foreground: #171717;
+  --white: white;
+  --black: black;
+  --dark-grey: #333;
+  --grey: #bdbdbd;
+  --lightest-grey: whitesmoke;
+  --primary: #00FF66;
+  --mid-grey: #525252;
+  --light-grey: #d4d4d4;
+}
+
+
+
+/* Apply global styles */
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'CoinbaseText', sans-serif;
 }

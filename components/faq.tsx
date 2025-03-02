@@ -5,7 +5,7 @@ const faqs = [
     id: 1,
     question: "How does World Mobile work?",
     answer:
-      "World Mobile operates by combining a user‑owned network of AirNodes with select partner networks, delivering fast, secure mobile services with full talk, text, data, and emergency access across the USA.",
+      "World Mobile operates by combining a user‑owned network of AirNodes with select partner networks, delivering fast, secure mobile services with full talk, text, data, and emergency access across the USA. Based on typical user experiences, coverage often outperforms traditional networks like Big Wireless — though actual performance may vary by region.",
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const faqs = [
     id: 4,
     question: "Does World Mobile support international roaming?",
     answer:
-      "Yes. World Mobile covers over 60 countries and is continuously expanding its global reach, so you can stay connected wherever you go.",
+      "Yes. World Mobile covers over 60 countries and is continuously expanding its global reach, so you can stay connected wherever you go. Please note that international availability is subject to change.",
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const faqs = [
     id: 8,
     question: "How do World Mobile unlimited plans work?",
     answer:
-      "World Mobile unlimited plans are prepaid monthly and include unlimited data, hotspot data, and talk/text. Users enjoy consistent 4G LTE speeds with typical download speeds of 110–170 Mbps, upload speeds of 10–30 Mbps, and latency between 120–180 ms.",
+      "World Mobile unlimited plans are prepaid monthly and include unlimited data, hotspot data, and talk/text. Users enjoy consistent 4G LTE speeds with typical download speeds of 110–170 Mbps, upload speeds of 10–30 Mbps, and latency between 120–180 ms. These figures are averages and actual performance may vary based on network conditions.",
   },
   {
     id: 9,
@@ -78,9 +78,21 @@ const faqs = [
   },
   {
     id: 10,
-    question: "Should you sign up for World Mobile Wireless?",
+    question: "Should you sign up for World Mobile?",
     answer:
       "Yes—if you value speed, extensive USA coverage, superior privacy, and extra security features like SwapStop, World Mobile is the smart choice.",
+  },
+  {
+    id: 11,
+    question: "What is Refer Mobile?",
+    answer:
+      "Refer Mobile is an independent referral platform that connects new customers to World Mobile’s network. We help you unlock exclusive rewards and savings. Please note, we are not endorsed or affiliated with World Mobile.",
+  },
+  {
+    id: 12,
+    question: "How does Refer Mobile make money?",
+    answer:
+      "Refer Mobile earns commissions on successful referrals to World Mobile. Our revenue is generated through partnerships, which allows us to offer exclusive rewards and savings to users who refer new customers.",
   },
 ]
 

@@ -12,7 +12,7 @@ export default function Example() {
             href="https://wmtx.cc/mobile"
             className="rounded-md bg-[var(--primary)] px-4 py-2 text-sm font-semibold text-[var(--white)] shadow-sm hover:bg-[var(--primary-dark)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary)]"
           >
-            Subscribe Now
+            Join World Mobile
           </a>
         </div>
       </div>

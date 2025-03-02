@@ -1,0 +1,7 @@
+# robots.txt for refermobile.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location (update the URL if your sitemap is located elsewhere)
+Sitemap: https://refermobile.com/sitemap.xml

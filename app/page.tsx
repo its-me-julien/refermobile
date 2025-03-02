@@ -16,6 +16,7 @@ export default function Home() {
         {/* Primary Meta Tags */}
         <meta charSet="UTF-8" />
         <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://refermobile.com/" />.
 
         {/* Favicon & App Icons */}
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />

@@ -4,7 +4,6 @@
 
 @theme {
   --font-coinbase: CoinbaseText, sans-serif;
-
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-white: var(--white);
@@ -51,19 +50,19 @@
 
 /* Define light mode colors */
 :root {
-  --background: #F5E6C8;
+  --background: #ffffff;
   --foreground: #171717;
-  --white: white;
-  --black: black;
-  --dark-grey: #333;
+  --white: #ffffff;
+  --black: #000000;
+  --dark-grey: #333333;
   --grey: #bdbdbd;
-  --lightest-grey: whitesmoke;
-  --primary: #00FF66;
   --mid-grey: #525252;
   --light-grey: #d4d4d4;
+  --lightest-grey: whitesmoke;
+  --primary: #4F46E5; /* Indigo-600 */
+  --primary-light: #818CF8; /* Lighter variant (Indigo-400) */
+  --primary-dark: #4338CA; /* Darker variant (Indigo-700) */
 }
-
-
 
 /* Apply global styles */
 body {
@@ -71,3 +70,4 @@ body {
   background: var(--background);
   font-family: 'CoinbaseText', sans-serif;
 }
+

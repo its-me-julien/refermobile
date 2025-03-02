@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { CheckCircleIcon } from '@heroicons/react/24/solid'
 
 export default function Header() {
-  const [referralCode] = useState("THECLUB")
+  const [referralCode] = useState("NOTLIVEYET")
   const [showAlert, setShowAlert] = useState(false)
 
   const copyReferralCode = () => {

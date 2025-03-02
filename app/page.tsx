@@ -7,6 +7,7 @@ import CTA1 from "@/components/cta_section1";
 import CTA2 from "@/components/cta_section2";
 import Contact from "@/components/contact";
 import About from "@/components/about";
+import Banner from "@/components/banner";
 
 export default function Home() {
   return (
@@ -19,7 +20,6 @@ export default function Home() {
         {/* Favicon & App Icons */}
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
 
@@ -57,15 +57,19 @@ export default function Home() {
             }),
           }}
         />
+      
       </Head>
+      
       <Menu />
       <Header />
+     
       <Plans />
       <CTA1 />
       <About />
       <Faq />
       <Contact />
       <CTA2 />
+      <Banner />
     </>
   );
 }

@@ -1,6 +1,6 @@
 export default function Example() {
   return (
-    <div className="bg-[var(--lightest-grey)]">
+    <div className="bg-white">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
         <h2 className="text-3xl font-bold tracking-tight text-[var(--foreground)] sm:text-4xl">
           Ready to Join World Mobile?

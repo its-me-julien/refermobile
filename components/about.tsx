@@ -23,9 +23,9 @@ export default function Example() {
             <p className="text-base font-semibold leading-7 text-[var(--primary)]">
               What is World Mobile?
             </p>
-            <h1 className="mt-2 text-3xl font-bold tracking-tight text-[var(--foreground)] sm:text-4xl">
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-[var(--foreground)] sm:text-4xl">
               The Future of Mobile Connectivity
-            </h1>
+            </h2>
             <div className="mt-10 text-base leading-7 text-[var(--mid-grey)]">
               <p>
                 World Mobile is a new mobile network built on user‑owned infrastructure and supported by trusted partner networks, delivering coverage in the USA that outperforms Big Wireless.

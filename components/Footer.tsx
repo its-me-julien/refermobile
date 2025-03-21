@@ -22,7 +22,7 @@ const navigation: {
     { name: "Buy WMTx", href: "https://worldmobile.info/participate/where-to-buy-wmtx/" },
     { name: "Stake WMTx", href: "https://stake.worldmobile.club/" },
     { name: "Ecosystem", href: "https://worldmobile.me/" },
-    { name: "Event Calendar", href: "https://worldmobile.club/calendar" },
+    { name: "Calendar", href: "https://worldmobile.club/calendar" },
   ],
   operators: [
     { name: "Getting Started", href: "https://worldmobile.info/getting-started-with-world-mobile/" },
@@ -57,7 +57,7 @@ export default function Footer() {
             </a>
 
             <p className="text-sm text-lightGrey">
-            ReferMobile is an independent platform, operated by <a href="https://worldmobile.club/" className="text-lightGrey hover:text-primary transition">The&nbsp;Club</a>. We are not owned by or officially associated with any mobile or internet provider. Our site may contain affiliate links that help fund our content.
+            ReferMobile is an independent platform, operated by <a href="https://worldmobile.club/" className="text-lightGrey hover:text-primary transition">The&nbsp;Club</a>. Our site may contain affiliate links that help fund our content.
             </p>
           </div>
 

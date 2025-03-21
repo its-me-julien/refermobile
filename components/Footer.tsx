@@ -14,7 +14,7 @@ const navigation: {
 } = {
   customers: [
     { name: "Network Reviews", href: "https://worldmobile.review/" },
-    { name: "Wireless Deals", href: "https://wm.deals/" },
+    { name: "World Mobile Deals", href: "https://wm.deals/" },
     { name: "Referral Codes", href: "https://refermobile.com/" },
     { name: "Get Help", href: "https://worldmobile.club/c/help/71" },
   ],
@@ -45,7 +45,7 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           {/* Branding & Social */}
           <div className="space-y-6">
-            <a href="https://worldmobile.info/" className="flex items-center space-x-3">
+            <a href="https://refermobile.com/" className="flex items-center space-x-3">
               <Image 
                 src="/web-app-manifest-192x192.png" 
                 alt="Refer World Mobile Logo" 

@@ -1,37 +1,39 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type NavigationLink = {
   name: string;
   href: string;
 };
 
-type SocialLink = {
-  name: string;
-  href: string;
-  icon: string;
-};
-
 const navigation: {
-  worldMobile: NavigationLink[];
+  customers: NavigationLink[];
+  tokenHolders: NavigationLink[];
+  operators: NavigationLink[];
   community: NavigationLink[];
-  legal: NavigationLink[];
-  social: SocialLink[];
 } = {
-  worldMobile: [
-    { name: "World Mobile Links", href: "https://worldmobile.me/" },
-    { name: "World Mobile Info", href: "https://worldmobile.info/" },
-    { name: "Stake with The Club", href: "https://stake.worldmobile.club/" },
+  customers: [
+    { name: "Network Reviews", href: "https://worldmobile.review/" },
+    { name: "Wireless Deals", href: "https://wm.deals/" },
+    { name: "Referral Codes", href: "https://refermobile.com/" },
+    { name: "Get Help", href: "https://worldmobile.club/c/help/71" },
+  ],
+  tokenHolders: [
+    { name: "Buy WMTx", href: "/participate/where-to-buy-wmtx/" },
+    { name: "Stake WMTx", href: "https://stake.worldmobile.club/" },
+    { name: "Ecosystem", href: "https://worldmobile.me/" },
+    { name: "Event Calendar", href: "https://worldmobile.club/calendar" },
+  ],
+  operators: [
+    { name: "Getting Started", href: "/getting-started-with-world-mobile/" },
+    { name: "EarthNodes (ENO)", href: "https://worldmobile.club/c/earthnodes/5" },
+    { name: "AirNodes (ANO)", href: "https://worldmobile.club/c/airnode/6" },
+    { name: "HEX Guardians", href: "https://worldmobile.club/c/hex-guardians/8" },
   ],
   community: [
-    { name: "Community Forum", href: "https://worldmobile.club/" },
-    { name: "Twitter", href: "https://x.com/Club_wmtx" },
-  ],
-  legal: [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-  ],
-  social: [
-    { name: "Twitter", href: "https://x.com/Club_wmtx", icon: "bxl-twitter" },
+    { name: "Forum", href: "https://worldmobile.club/" },
+    { name: "Milestones", href: "/timeline/" },
+    { name: "Grants", href: "/participate/grant-hub/" },
   ],
 };
 
@@ -43,48 +45,34 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           {/* Branding & Social */}
           <div className="space-y-6">
-            <a href="https://refermobile.com/" className="flex items-center space-x-3">
+            <a href="https://worldmobile.info/" className="flex items-center space-x-3">
               <Image 
-                src="/web-app-manifest-512x512.png" 
-                alt="ReferMobile" 
+                src="/web-app-manifest-192x192.png" 
+                alt="Refer World Mobile Logo" 
                 width={40} 
                 height={40} 
-                priority
+                priority 
               />
-              <span className="text-lg font-semibold tracking-wide">ReferMobile</span>
+              <span className="text-lg font-semibold tracking-wide text-lightGrey hover:text-primary transition">ReferMobile</span>
             </a>
-            <p className="text-sm text-[var(--light-grey)]">
-              ReferMobile is an independent referral platform connecting new customers to World Mobile’s network.
-              We are not owned by, operated by, or officially associated with any mobile or internet provider.
-              Our site may contain affiliate links that help fund our content.
+
+            <p className="text-sm text-lightGrey">
+            ReferMobile is an independent platform, operated by <a href="https://worldmobile.club/" className="text-lightGrey hover:text-primary transition">The&nbsp;Club</a>. We are not owned by or officially associated with any mobile or internet provider. Our site may contain affiliate links that help fund our content.
             </p>
-            <div className="flex space-x-6">
-              {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--light-grey)] hover:text-[var(--primary)] transition"
-                >
-                  <i className={`bx ${item.icon} text-2xl`}></i>
-                  <span className="sr-only">{item.name}</span>
-                </a>
-              ))}
-            </div>
           </div>
 
-          {/* Footer Links Grid - 3 Columns */}
-          <div className="mt-12 grid grid-cols-1 gap-8 xl:col-span-2 xl:mt-0 sm:grid-cols-3">
-            <FooterSection title="World Mobile" links={navigation.worldMobile} />
+          {/* Footer Links Grid */}
+          <div className="mt-12 grid grid-cols-1 gap-8 xl:col-span-2 xl:mt-0 sm:grid-cols-4">
+            <FooterSection title="Customers" links={navigation.customers} />
+            <FooterSection title="Token Holders" links={navigation.tokenHolders} />
+            <FooterSection title="Operators" links={navigation.operators} />
             <FooterSection title="Community" links={navigation.community} />
-            <FooterSection title="Legal" links={navigation.legal} />
           </div>
         </div>
 
         {/* Copyright */}
         <div className="mt-12 border-t border-white/10 pt-8 text-center">
-          <p className="text-xs text-[var(--light-grey)]">
+          <p className="text-xs text-lightGrey">
             &copy; {new Date().getFullYear()} ReferMobile. All rights reserved.
           </p>
         </div>
@@ -103,13 +91,28 @@ function FooterSection({ title, links }: FooterSectionProps) {
     <div>
       <h3 className="text-sm font-semibold leading-6 text-white">{title}</h3>
       <ul role="list" className="mt-4 space-y-3">
-        {links.map((item) => (
-          <li key={item.name}>
-            <a href={item.href} className="text-sm text-[var(--light-grey)] hover:text-[var(--primary)] transition">
-              {item.name}
-            </a>
-          </li>
-        ))}
+        {links.map((item) => {
+          const isInternal = item.href.startsWith("/");
+
+          return (
+            <li key={item.name}>
+              {isInternal ? (
+                <Link href={item.href} className="text-sm text-lightGrey hover:text-primary transition">
+                  {item.name}
+                </Link>
+              ) : (
+                <a
+                  href={item.href}
+                  className="text-sm text-lightGrey hover:text-primary transition"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.name}
+                </a>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

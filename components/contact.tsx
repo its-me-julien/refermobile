@@ -39,10 +39,10 @@ export default function Example() {
                   </dl>
                 </div>
                 <div className="rounded-2xl bg-gray-50 p-10">
-                  <h3 className="text-base font-semibold leading-7 text-gray-900">Community Forum</h3>
+                  <h3 className="text-base font-semibold leading-7 text-gray-900">Forum</h3>
                   <dl className="mt-3 space-y-1 text-sm leading-6 text-gray-600">
                     <div>
-                      <dt className="sr-only">Community Forum</dt>
+                      <dt className="sr-only">Forum</dt>
                       <dd>
                         <a
                           href="https://worldmobile.club/c/world-mobile-help/71"
@@ -50,7 +50,7 @@ export default function Example() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Ask The Club
+                          Ask For Community Support
                         </a>
                       </dd>
                     </div>

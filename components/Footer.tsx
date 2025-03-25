@@ -6,6 +6,16 @@ type NavigationLink = {
   href: string;
 };
 
+const socialLinks: NavigationLink[] = [
+  { name: "X", href: "https://x.com/worldmobilecode" },
+  { name: "Quora", href: "https://worldmobilereferralcode.quora.com/" },
+  { name: "Pinterest", href: "https://www.pinterest.com/worldmobilereferral/world-mobile/" },
+  { name: "Medium", href: "https://worldmobilereferralcode.medium.com/" },
+  { name: "Forum", href: "https://worldmobile.club/t/world-mobile-referral-code/720" },
+  { name: "Instagram", href: "https://www.instagram.com/world_mobile_referral/" },
+  { name: "Linktree", href: "https://linktr.ee/worldmobilereferral" },
+];
+
 const navigation: {
   customers: NavigationLink[];
   tokenHolders: NavigationLink[];
@@ -36,6 +46,7 @@ const navigation: {
     { name: "Grants", href: "https://worldmobile.info/participate/grant-hub/" },
   ],
 };
+
 
 export default function Footer() {
   return (
@@ -68,6 +79,21 @@ export default function Footer() {
             <FooterSection title="Operators" links={navigation.operators} />
             <FooterSection title="Community" links={navigation.community} />
           </div>
+        </div>
+
+         {/* Social Links */}
+         <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm text-lightGrey">
+          {socialLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="hover:text-primary transition"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link.name}
+            </a>
+          ))}
         </div>
 
         {/* Copyright */}

@@ -50,6 +50,41 @@ export const metadata: Metadata = {
 };
 
 
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Refer Mobile",
+      "url": "https://refermobile.com/",
+      "description": "Join World Mobile's user-owned mobile network with our exclusive referral code. Unlock promotions and significant savings.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Refer Mobile",
+        "url": "https://refermobile.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://refermobile.com/android-chrome-192x192.png",
+          "width": 192,
+          "height": 192
+        },
+        "sameAs": [
+          "https://x.com/worldmobilecode",
+          "https://worldmobilereferralcode.quora.com/",
+          "https://www.pinterest.com/worldmobilereferral/world-mobile/",
+          "https://worldmobilereferralcode.medium.com/",
+          "https://www.instagram.com/world_mobile_referral/",
+          "https://linktr.ee/worldmobilereferral",
+          "https://worldmobile.club/t/world-mobile-referral-code/720"
+        ]
+      }
+    }),
+  }}
+/>
+
+
+
 export default function Home() {
   return (
     <>

@@ -13,7 +13,7 @@ const socialLinks: NavigationLink[] = [
   { name: "Medium", href: "https://worldmobilereferralcode.medium.com/" },
   { name: "Forum", href: "https://worldmobile.club/t/world-mobile-referral-code/720" },
   { name: "Instagram", href: "https://www.instagram.com/world_mobile_referral/" },
-  { name: "Linktree", href: "https://linktr.ee/worldmobilereferral" },
+  { name: "Linktree", href: "https://linktr.ee/worldmobile_referral" },
 ];
 
 const navigation: {
